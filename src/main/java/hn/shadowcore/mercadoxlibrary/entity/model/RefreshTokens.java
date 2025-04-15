@@ -1,4 +1,4 @@
-package hn.baas.mercadoxlibrary.entity;
+package hn.shadowcore.mercadoxlibrary.entity.model;
 
 
 import jakarta.persistence.Column;
@@ -8,36 +8,27 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class AuditLog {
+public class RefreshTokens {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "org_id")
+    @JoinColumn(name = "org_id", nullable = false)
     private Organization organization;
 
-    @Column(name = "action", nullable = false)
-    private String action;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
-    @Column(name = "timestamp", nullable = false)
-    private Timestamp timestamp;
+    @Column(name = "expires_at", nullable = false)
+    private Timestamp expiresAt;
 
 }

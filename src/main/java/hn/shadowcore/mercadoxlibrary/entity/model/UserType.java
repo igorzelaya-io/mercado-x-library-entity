@@ -1,7 +1,7 @@
-package hn.baas.mercadoxlibrary.entity;
+package hn.shadowcore.mercadoxlibrary.entity.model;
 
 
-import hn.baas.mercadoxlibrary.entity.enums.UserTypeName;
+import hn.shadowcore.mercadoxlibrary.entity.model.enums.UserTypeName;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

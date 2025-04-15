@@ -1,4 +1,4 @@
-package hn.baas.mercadoxlibrary.entity.enums;
+package hn.shadowcore.mercadoxlibrary.entity.model.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

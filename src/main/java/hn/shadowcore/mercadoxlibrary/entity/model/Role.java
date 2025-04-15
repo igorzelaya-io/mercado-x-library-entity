@@ -1,4 +1,4 @@
-package hn.baas.mercadoxlibrary.entity;
+package hn.shadowcore.mercadoxlibrary.entity.model;
 
 
 import jakarta.persistence.Entity;

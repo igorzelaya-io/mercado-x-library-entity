@@ -1,4 +1,4 @@
-package hn.baas.mercadoxlibrary.entity;
+package hn.shadowcore.mercadoxlibrary.entity.model;
 
 
 import jakarta.persistence.Column;
@@ -10,13 +10,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Permission {
+@NoArgsConstructor
+public class Organization {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,5 +25,9 @@ public class Permission {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "created_at", nullable = false)
+    private Timestamp createdAt;
+
 
 }
