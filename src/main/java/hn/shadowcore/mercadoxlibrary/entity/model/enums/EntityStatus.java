@@ -1,16 +1,12 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.enums;
 
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum ShippingStatus {
+public enum EntityStatus {
 
-    PLACED(0),
-    IN_PROGRESS(1),
-
-    DELIVERED(2),
-    CANCELED(3);
+    INACTIVE(0),
+    ACTIVE(1);
 
     private final int statusCode;
 }

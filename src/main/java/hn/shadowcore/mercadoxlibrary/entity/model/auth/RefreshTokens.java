@@ -1,4 +1,4 @@
-package hn.shadowcore.mercadoxlibrary.entity.model;
+package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 
 import jakarta.persistence.Column;
@@ -8,11 +8,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.sql.Timestamp;
 
 @Entity
+@Table(name = "refresh_tokens", schema = "refresh_tokens")
 @Data
 public class RefreshTokens {
 

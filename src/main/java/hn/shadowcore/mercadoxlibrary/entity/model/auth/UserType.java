@@ -1,6 +1,7 @@
-package hn.shadowcore.mercadoxlibrary.entity.model;
+package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 
+import hn.shadowcore.mercadoxlibrary.entity.model.enums.UserTypeName;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,13 +17,17 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Permission {
+public class UserType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     @Column(name = "name", nullable = false)
-    private String name;
+    private UserTypeName name;
+
+    @Column(name = "description", nullable = false)
+    private String description;
+
 
 }

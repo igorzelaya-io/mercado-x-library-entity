@@ -1,4 +1,4 @@
-package hn.shadowcore.mercadoxlibrary.entity.model;
+package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 
 import jakarta.persistence.Column;
@@ -6,18 +6,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
+@Table(name = "permission", schema = "auth")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Organization {
+@AllArgsConstructor
+public class Permission {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,9 +26,5 @@ public class Organization {
 
     @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "created_at", nullable = false)
-    private Timestamp createdAt;
-
 
 }
