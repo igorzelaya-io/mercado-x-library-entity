@@ -1,6 +1,7 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 
+import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Inventory;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Item;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Location;
@@ -30,7 +31,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Branch {
+public class Branch extends TenantBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

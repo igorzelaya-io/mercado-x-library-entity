@@ -1,6 +1,7 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.core;
 
 
+import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
 import hn.shadowcore.mercadoxlibrary.entity.model.enums.EntityStatus;
 import jakarta.persistence.Column;
@@ -24,7 +25,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ServiceCategory {
+public class ServiceCategory extends TenantBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

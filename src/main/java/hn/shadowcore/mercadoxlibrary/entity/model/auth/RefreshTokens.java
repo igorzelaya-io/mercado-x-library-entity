@@ -1,6 +1,7 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 
+import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +17,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "refresh_tokens", schema = "refresh_tokens")
 @Data
-public class RefreshTokens {
+public class RefreshTokens extends TenantBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
