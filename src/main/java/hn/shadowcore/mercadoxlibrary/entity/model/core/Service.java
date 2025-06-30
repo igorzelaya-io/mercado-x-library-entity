@@ -56,6 +56,6 @@ public class Service extends TenantBaseEntity {
         joinColumns = @JoinColumn(name = "service_id"),
             inverseJoinColumns = @JoinColumn(name = "branch_id")
     )
-    private Set<Branch> availableBranches = new HashSet<>();
+    private Set<Branch> serviceBranchAvailability = new HashSet<>();
 
 }

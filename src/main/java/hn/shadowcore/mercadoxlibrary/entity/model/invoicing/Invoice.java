@@ -44,7 +44,7 @@ public class Invoice {
     @Column
     private BigDecimal discount;
 
-    @Column(name = "date", nullable = false)
+    @Column(name = "invoice_date", nullable = false)
     private Timestamp invoiceDate;
 
     @Column(name = "void_due_date")

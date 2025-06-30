@@ -72,6 +72,6 @@ public class Item extends TenantBaseEntity {
     @JoinTable(name = "item_branch_availability",
         joinColumns = @JoinColumn(name = "item_id"),
         inverseJoinColumns = @JoinColumn(name = "branch_id"))
-    private Set<Branch> availableItems = new HashSet<>();
+    private Set<Branch> itemBranchAvailability = new HashSet<>();
 
 }

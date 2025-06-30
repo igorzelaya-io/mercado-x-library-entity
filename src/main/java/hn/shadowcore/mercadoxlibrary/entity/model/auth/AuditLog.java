@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +26,9 @@ import java.sql.Timestamp;
 public class AuditLog {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "audit_log_seq_gen")
+    @SequenceGenerator(name = "audit_log_seq_gen",
+            sequenceName = "auth.audit_log_seq", allocationSize = 1)
     private Long id;
 
     @ManyToOne

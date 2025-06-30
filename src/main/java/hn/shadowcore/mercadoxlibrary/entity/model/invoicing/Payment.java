@@ -7,6 +7,8 @@ import hn.shadowcore.mercadoxlibrary.entity.model.core.Item;
 import hn.shadowcore.mercadoxlibrary.entity.model.enums.PaymentStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -29,7 +31,8 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "status", nullable = false)
+    @Column(name = "payment_status", nullable = false)
+    @Enumerated(EnumType.STRING)
     private PaymentStatus status;
 
     @ManyToOne

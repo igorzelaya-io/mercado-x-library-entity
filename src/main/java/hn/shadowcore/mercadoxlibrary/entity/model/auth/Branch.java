@@ -51,10 +51,10 @@ public class Branch extends TenantBaseEntity {
     @JoinColumn(name = "location_id")
     private Location location;
 
-    @ManyToMany(mappedBy = "availableItems")
+    @ManyToMany(mappedBy = "itemBranchAvailability")
     private Set<Item> items = new HashSet<>();
 
-    @ManyToMany(mappedBy = "availableServices")
+    @ManyToMany(mappedBy = "serviceBranchAvailability")
     private Set<Service> services = new HashSet<>();
 
 

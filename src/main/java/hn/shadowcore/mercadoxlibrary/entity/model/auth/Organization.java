@@ -11,8 +11,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Filter;
+import org.hibernate.annotations.FilterDef;
+import org.hibernate.annotations.ParamDef;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -23,6 +27,8 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder(toBuilder = true)
+@Filter(name = "enabledEntityFilter", condition = "enabled = :enabled")
 public class Organization {
 
     @Id
@@ -32,8 +38,14 @@ public class Organization {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "enabled", nullable = false)
+    private Boolean enabled;
+
     @Column(name = "created_at", nullable = false)
     private Timestamp createdAt;
+
+    @Column(name = "org_admin_id")
+    private String userAdminId;
 
     @OneToMany(mappedBy = "organization")
     private List<User> orgUsers;

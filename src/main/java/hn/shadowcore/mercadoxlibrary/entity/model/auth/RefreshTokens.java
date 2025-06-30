@@ -9,18 +9,27 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "refresh_tokens", schema = "refresh_tokens")
+@Table(name = "refresh_tokens", schema = "auth")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class RefreshTokens extends TenantBaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "refresh_token_seq_gen")
+    @SequenceGenerator(name = "refresh_token_seq_gen",
+            sequenceName = "auth.refresh_token_seq", allocationSize = 1)
     private Long id;
 
     @ManyToOne

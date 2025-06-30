@@ -15,11 +15,13 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "category", schema = "core")
 @Data
@@ -38,7 +40,7 @@ public class Category extends TenantBaseEntity {
     @JoinColumn(name = "org_id")
     private Organization organization;
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "category")
     private List<Item> items;
 
     @Column(name = "entity_status", nullable = false)

@@ -15,19 +15,25 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Filter;
+import org.hibernate.annotations.FilterDef;
+import org.hibernate.annotations.ParamDef;
 
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-@Entity
-@Table(name = "user", schema = "auth")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true) @Data
+@Entity @Table(name = "user", schema = "auth")
+@AllArgsConstructor @NoArgsConstructor
+@Builder(toBuilder = true)
+@FilterDef(name = "enabledEntityFilter", parameters = @ParamDef(name = "enabled", type = Boolean.class))
+@Filter(name = "enabledEntityFilter", condition = "enabled = :enabled")
 public class User extends TenantBaseEntity {
 
     @Id
@@ -36,6 +42,9 @@ public class User extends TenantBaseEntity {
 
     @Column(name = "username", nullable = false)
     private String username;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -47,7 +56,7 @@ public class User extends TenantBaseEntity {
     private String email;
 
     @Column(name = "enabled", nullable = false)
-    private boolean enabled;
+    private Boolean enabled;
 
     @Column(name = "created_at", nullable = false)
     private Timestamp createdAt;
