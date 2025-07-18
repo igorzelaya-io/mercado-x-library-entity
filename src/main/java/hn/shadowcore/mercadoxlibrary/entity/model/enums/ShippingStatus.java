@@ -5,12 +5,13 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public enum ShippingStatus {
+    UNDER_REVIEW(0),
 
-    PLACED(0),
-    IN_PROGRESS(1),
+    PLACED(1),
+    IN_PROGRESS(2),
 
-    DELIVERED(2),
-    CANCELED(3);
+    DELIVERED(3),
+    CANCELED(4);
 
     private final int statusCode;
 }

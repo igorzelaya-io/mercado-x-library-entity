@@ -1,6 +1,5 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.core;
 
-
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Branch;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
@@ -15,19 +14,23 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Table(name = "item", schema = "core")
 @Data
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
 public class Item extends TenantBaseEntity {
@@ -42,15 +45,24 @@ public class Item extends TenantBaseEntity {
     @Column(name = "description", nullable = false)
     private String description;
 
+    @Column(name = "unit_quantity", nullable = false)
+    private Integer unitQuantity;
+
     @Column(name = "unit_price", nullable = false)
     private BigDecimal unitPrice;
 
     @Column(name = "in_stock", nullable = false)
     private Boolean inStock;
 
+    @Column(name = "image")
+    private String image;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "org_id")
     private Organization organization;
+
+    @OneToMany(mappedBy = "item")
+    private Set<OrderItem> orderItems;
 
     @ManyToOne
     @JoinColumn(name = "category_id")

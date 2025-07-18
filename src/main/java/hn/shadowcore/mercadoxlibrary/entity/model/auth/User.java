@@ -3,6 +3,7 @@ package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Location;
+import hn.shadowcore.mercadoxlibrary.entity.model.core.Order;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -68,6 +69,9 @@ public class User extends TenantBaseEntity {
     @ManyToOne
     @JoinColumn(name = "org_id")
     private Organization organization;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> order;
 
     @OneToMany(mappedBy = "user")
     private List<AuditLog> userLogs;

@@ -13,10 +13,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Filter;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,9 +27,10 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "category", schema = "core")
-@Data
+@Data @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
+@Filter(name = "enabledEntityFilter", condition = "enabled = :enabled")
 public class Category extends TenantBaseEntity {
 
     @Id
@@ -34,6 +38,7 @@ public class Category extends TenantBaseEntity {
     private UUID id;
 
     @Column(name = "name")
+    @NotBlank
     private String name;
 
     @ManyToOne
@@ -43,7 +48,7 @@ public class Category extends TenantBaseEntity {
     @OneToMany(mappedBy = "category")
     private List<Item> items;
 
-    @Column(name = "entity_status", nullable = false)
-    private EntityStatus entityStatus;
+    @Column(name = "enabled", nullable = false)
+    private Boolean enabled;
 
 }

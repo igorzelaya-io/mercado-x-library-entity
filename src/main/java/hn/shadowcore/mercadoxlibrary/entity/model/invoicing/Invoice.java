@@ -4,6 +4,7 @@ package hn.shadowcore.mercadoxlibrary.entity.model.invoicing;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.User;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Item;
+import hn.shadowcore.mercadoxlibrary.entity.model.core.Order;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Shipment;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -76,6 +77,10 @@ public class Invoice {
     @OneToOne
     @JoinColumn(name = "shipping_id", referencedColumnName = "id")
     private Shipment shipping;
+
+    @OneToOne
+    @JoinColumn(name = "order_id", referencedColumnName = "id")
+    private Order order;
 
     @OneToMany(mappedBy = "invoice")
     private List<Item> items;

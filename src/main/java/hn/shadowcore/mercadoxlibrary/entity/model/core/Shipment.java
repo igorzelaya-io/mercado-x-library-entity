@@ -32,16 +32,12 @@ public class Shipment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private ShippingStatus status;
-
     @OneToOne
     @JoinColumn(name = "location_id", referencedColumnName = "id")
     private Location location;
 
-    @OneToMany(mappedBy = "shipping")
-    private List<Item> items;
+    @OneToMany(mappedBy = "shipment")
+    private List<Order> orders;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
