@@ -14,9 +14,9 @@ import java.util.UUID;
 public class OrderItemsKey implements Serializable {
 
     @Column(name = "item_id")
-    private UUID itemId;
+    private String itemId;
 
     @Column(name = "order_id")
-    private UUID orderId;
+    private String orderId;
 
 }
