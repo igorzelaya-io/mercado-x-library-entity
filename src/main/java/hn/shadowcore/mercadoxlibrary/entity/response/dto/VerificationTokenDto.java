@@ -2,7 +2,7 @@ package hn.shadowcore.mercadoxlibrary.entity.response.dto;
 
 import java.sql.Timestamp;
 
-public record VerificationToken(
+public record VerificationTokenDto(
     String id,
 
     Timestamp expiresAt,

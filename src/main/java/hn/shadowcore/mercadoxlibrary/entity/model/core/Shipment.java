@@ -1,6 +1,7 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.core;
 
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.User;
+import hn.shadowcore.mercadoxlibrary.entity.model.enums.OrderStatus;
 import hn.shadowcore.mercadoxlibrary.entity.model.enums.ShippingStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,9 +16,11 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
@@ -26,6 +29,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder(toBuilder = true)
 public class Shipment {
 
     @Id
@@ -36,8 +40,18 @@ public class Shipment {
     @JoinColumn(name = "location_id", referencedColumnName = "id")
     private Location location;
 
-    @OneToMany(mappedBy = "shipment")
-    private List<Order> orders;
+    @Column(name = "placedAt")
+    private Timestamp placedAt;
+
+    @Column(name = "delivered_at")
+    private Timestamp deliveredAt;
+
+    @Column(name = "shipment_status")
+    @Enumerated(EnumType.STRING)
+    private OrderStatus shipmentStatus;
+
+    @OneToOne(mappedBy = "shipment")
+    private Order order;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")

@@ -27,7 +27,6 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "order", schema = "core")
@@ -47,11 +46,14 @@ public class Order extends TenantBaseEntity {
     @Column(name = "created_at")
     private Timestamp createdAt;
 
+    @Column(name = "dispatched_by")
+    private String dispatchedBy;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "shipment_id")
     private Shipment shipment;
 

@@ -59,6 +59,9 @@ public class User extends TenantBaseEntity {
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
 
+    @Column(name = "is_admin", nullable = false)
+    private Boolean isAdmin;
+
     @Column(name = "created_at", nullable = false)
     private Timestamp createdAt;
 
@@ -86,5 +89,9 @@ public class User extends TenantBaseEntity {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> userRoles;
+
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 
 }
