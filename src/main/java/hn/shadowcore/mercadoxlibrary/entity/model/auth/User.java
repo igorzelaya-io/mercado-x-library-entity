@@ -56,11 +56,17 @@ public class User extends TenantBaseEntity {
     @Column(name = "email", nullable = false)
     private String email;
 
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
 
     @Column(name = "is_admin", nullable = false)
     private Boolean isAdmin;
+
+    @Column(name = "drive_available")
+    private Boolean driveAvailable;
 
     @Column(name = "created_at", nullable = false)
     private Timestamp createdAt;

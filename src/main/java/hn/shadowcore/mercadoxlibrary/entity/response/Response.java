@@ -21,6 +21,8 @@ public abstract class Response<T> {
 
     private int pageSize = -1;
 
+    private String[] sort;
+
     public abstract void setPayload(T payload);
     public abstract T getPayload();
 

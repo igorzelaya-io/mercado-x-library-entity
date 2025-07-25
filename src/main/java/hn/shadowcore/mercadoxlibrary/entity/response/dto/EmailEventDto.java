@@ -5,17 +5,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
 import java.util.List;
+import java.util.UUID;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class EmailEventDto<T> implements EventDto {
 
-    private String eventType;
+    private UUID eventId;
+
+    private String eventSubject;
 
     private List<EmailRecipientDto> recipients;
 
     private T payload;
+
+    private Instant timestamp;
 
 }

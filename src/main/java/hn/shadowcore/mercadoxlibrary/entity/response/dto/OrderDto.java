@@ -18,6 +18,8 @@ public class OrderDto {
 
     private String customerName;
 
+    private String customerEmail;
+
     private String shippingAddress;
 
     private String locationReference;
@@ -27,5 +29,9 @@ public class OrderDto {
     private List<String> itemNames;
 
     private int quantity;
+
+    private String searchUrl;
+
+    private String friendlyUrl;
 
 }

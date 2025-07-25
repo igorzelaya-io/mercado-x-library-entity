@@ -49,6 +49,9 @@ public class Order extends TenantBaseEntity {
     @Column(name = "dispatched_by")
     private String dispatchedBy;
 
+    @Column(name = "delivery_id")
+    private String deliveryId;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

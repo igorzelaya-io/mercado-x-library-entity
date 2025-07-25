@@ -9,6 +9,8 @@ public interface OrderQueryUseCase {
 
     List<Order> findAllUnderReview();
 
+    Order findOrderById(String orderId);
+
     List<Order> findAllForUserAndStatus(String userId, OrderStatus orderStatus);
 
 }

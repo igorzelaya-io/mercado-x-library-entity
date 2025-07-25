@@ -1,6 +1,7 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.auth;
 
 
+import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,7 +23,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Role {
+public class Role extends TenantBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

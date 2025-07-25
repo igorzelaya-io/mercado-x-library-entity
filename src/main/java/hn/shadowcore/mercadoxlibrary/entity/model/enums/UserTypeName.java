@@ -11,9 +11,11 @@ public enum UserTypeName {
 
     SELLER(1),
 
-    ADMIN(2),
+    DRIVER(2),
 
-    SUPER_ADMIN(3);
+    ADMIN(3),
+
+    SUPER_ADMIN(4);
 
     private final int typeKey;
 
