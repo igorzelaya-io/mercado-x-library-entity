@@ -11,11 +11,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
@@ -24,9 +21,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Entity
 @Table(name = "order", schema = "core")
@@ -40,7 +43,7 @@ public class Order extends TenantBaseEntity {
     private String id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "order_status")
+    @Column(name = "order_status", nullable = false)
     private OrderStatus orderStatus;
 
     @Column(name = "created_at")
@@ -60,15 +63,26 @@ public class Order extends TenantBaseEntity {
     @JoinColumn(name = "shipment_id")
     private Shipment shipment;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "invoice_id")
     private Invoice invoice;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "org_id")
     private Organization organization;
 
-    @OneToMany(mappedBy = "order", fetch = FetchType.EAGER)
-    private Set<OrderItem> items;
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
+    private Set<OrderItem> items = new HashSet<>();
+
+    public void setOrganization(Organization organization) {
+        this.organization = organization;
+        this.setOrgId(organization.getId());
+    }
+
+    public static String generateId() {
+        String timestamp = LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE);
+        String suffix = UUID.randomUUID().toString().substring(0, 5).toUpperCase();
+        return new StringBuilder("ORD-").append(timestamp).append("-").append(suffix).toString();
+    }
 
 }

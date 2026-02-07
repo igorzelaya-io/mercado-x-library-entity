@@ -3,6 +3,7 @@ package hn.shadowcore.mercadoxlibrary.entity.model.core;
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Branch;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,7 +39,7 @@ public class Inventory extends TenantBaseEntity {
     @Column(name = "quantity")
     private Integer quantity;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "org_id")
     private Organization organization;
 

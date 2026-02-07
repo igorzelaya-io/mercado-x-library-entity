@@ -1,5 +1,7 @@
 package hn.shadowcore.mercadoxlibrary.entity.model.core;
 
+import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
+import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.User;
 import hn.shadowcore.mercadoxlibrary.entity.model.enums.OrderStatus;
 import hn.shadowcore.mercadoxlibrary.entity.model.enums.ShippingStatus;
@@ -19,6 +21,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Filter;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -30,7 +33,8 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class Shipment {
+@Filter(name = "orgIdFilter", condition = "org_id = :orgId")
+public class Shipment extends TenantBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,7 +44,7 @@ public class Shipment {
     @JoinColumn(name = "location_id", referencedColumnName = "id")
     private Location location;
 
-    @Column(name = "placedAt")
+    @Column(name = "placed_at")
     private Timestamp placedAt;
 
     @Column(name = "delivered_at")
@@ -60,5 +64,14 @@ public class Shipment {
     @ManyToOne
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private User deliveryEmployee;
+
+    @ManyToOne
+    @JoinColumn(name = "org_id", referencedColumnName = "id")
+    private Organization organization;
+
+    public void setOrganization(Organization organization) {
+        this.organization = organization;
+        this.setOrgId(organization.getId());
+    }
 
 }

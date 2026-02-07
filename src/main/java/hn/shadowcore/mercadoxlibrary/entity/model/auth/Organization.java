@@ -12,21 +12,20 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Filter;
-import org.hibernate.annotations.FilterDef;
-import org.hibernate.annotations.ParamDef;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "organization", schema = "auth")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter @Setter
+@AllArgsConstructor @NoArgsConstructor
 @Builder(toBuilder = true)
 @Filter(name = "enabledEntityFilter", condition = "enabled = :enabled")
 public class Organization {
@@ -58,5 +57,13 @@ public class Organization {
 
     @OneToMany(mappedBy = "organization")
     private List<Item> items;
+
+    public static Organization buildStaticTestOrg() {
+        return Organization.builder()
+                .name("Example Org.")
+                .enabled(true)
+                .createdAt(Timestamp.valueOf(LocalDateTime.now()))
+                .build();
+    }
 
 }

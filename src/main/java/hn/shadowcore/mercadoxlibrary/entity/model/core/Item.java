@@ -57,14 +57,14 @@ public class Item extends TenantBaseEntity {
     @Column(name = "image")
     private String image;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "org_id")
     private Organization organization;
 
     @OneToMany(mappedBy = "item")
     private Set<OrderItem> orderItems;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "category_id")
     private Category category;
 

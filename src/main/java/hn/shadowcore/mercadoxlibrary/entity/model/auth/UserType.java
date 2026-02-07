@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +19,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "user_type", schema = "auth")
-@Data
+@Data @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserType {
@@ -31,7 +32,7 @@ public class UserType {
     @Enumerated(EnumType.STRING)
     private UserTypeName name;
 
-    @Column(name = "description", nullable = false)
+    @Column
     private String description;
 
 

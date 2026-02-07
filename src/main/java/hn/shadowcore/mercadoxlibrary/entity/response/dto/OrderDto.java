@@ -18,7 +18,7 @@ public class OrderDto {
 
     private String customerName;
 
-    private String customerEmail;
+    private String email;
 
     private String shippingAddress;
 

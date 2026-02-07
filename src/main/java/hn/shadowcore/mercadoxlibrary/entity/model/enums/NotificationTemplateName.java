@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum EmailTemplate {
+public enum NotificationTemplateName {
 
     USER_VALIDATION_TEMPLATE("user-validation-template.html"),
     ORDER_REQUEST_TEMPLATE("order-request-template.html"),

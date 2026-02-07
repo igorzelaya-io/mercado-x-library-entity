@@ -1,5 +1,6 @@
 package hn.shadowcore.mercadoxlibrary.entity.response.dto;
 
+import hn.shadowcore.mercadoxlibrary.entity.model.enums.NotificationTemplateName;
 import hn.shadowcore.mercadoxlibrary.entity.response.EventDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +18,8 @@ public class EmailEventDto<T> implements EventDto {
     private UUID eventId;
 
     private String eventSubject;
+
+    private NotificationTemplateName emailTemplate;
 
     private List<EmailRecipientDto> recipients;
 

@@ -2,7 +2,6 @@ package hn.shadowcore.mercadoxlibrary.entity.model.core;
 
 
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
-import hn.shadowcore.mercadoxlibrary.entity.model.enums.EntityStatus;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,6 +30,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Filter(name = "enabledEntityFilter", condition = "enabled = :enabled")
+@Filter(name = "orgIdFilter", condition = "org_id = :orgId")
 public class Category extends TenantBaseEntity {
 
     @Id
@@ -50,5 +50,10 @@ public class Category extends TenantBaseEntity {
 
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
+
+    public void setOrganization(Organization organization) {
+        this.organization = organization;
+        this.setOrgId(organization.getId());
+    }
 
 }

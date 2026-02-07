@@ -10,19 +10,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Filter;
 
 import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Table(name = "role", schema = "auth")
-@Data
+@Data @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Filter(name = "orgIdFilter", condition = "org_id = :orgId")
 public class Role extends TenantBaseEntity {
 
     @Id
@@ -31,6 +35,10 @@ public class Role extends TenantBaseEntity {
 
     @Column(name = "name",nullable = false)
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "org_id")
+    private Organization organization;
 
     @ManyToMany
     @JoinTable(

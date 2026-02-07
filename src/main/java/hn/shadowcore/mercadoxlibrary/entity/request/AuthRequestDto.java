@@ -2,9 +2,11 @@ package hn.shadowcore.mercadoxlibrary.entity.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public final class AuthRequestDto {
 
     @NotNull

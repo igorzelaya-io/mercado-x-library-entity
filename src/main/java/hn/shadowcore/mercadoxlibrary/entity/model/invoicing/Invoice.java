@@ -27,7 +27,7 @@ import java.util.UUID;
 
 @Entity
 @Data
-@Table
+@Table(name = "invoice",  schema = "invoicing")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Invoice {

@@ -34,7 +34,7 @@ public class Location {
     @Column(nullable = false)
     private String address;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "location_reference")
     private String locationReference;
 
     @OneToMany(mappedBy = "location")
