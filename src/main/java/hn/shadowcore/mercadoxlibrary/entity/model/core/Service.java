@@ -3,7 +3,6 @@ package hn.shadowcore.mercadoxlibrary.entity.model.core;
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Branch;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
-import hn.shadowcore.mercadoxlibrary.entity.model.invoicing.Invoice;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -47,12 +46,9 @@ public class Service extends TenantBaseEntity {
     @JoinColumn(name = "org_id", nullable = false)
     private Organization organization;
 
-    @ManyToOne
-    @JoinColumn(name = "invoice_id")
-    private Invoice invoice;
-
     @ManyToMany
     @JoinTable(name = "service_branch_availability",
+        schema = "core",
         joinColumns = @JoinColumn(name = "service_id"),
             inverseJoinColumns = @JoinColumn(name = "branch_id")
     )

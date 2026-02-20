@@ -13,7 +13,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
@@ -56,7 +55,6 @@ public class NotificationTemplate extends TenantBaseEntity {
     @Column
     private String subject;
 
-    @Lob
     @Column(name = "body_html", columnDefinition = "TEXT")
     private String bodyHtml;
 
@@ -75,6 +73,7 @@ public class NotificationTemplate extends TenantBaseEntity {
     @ElementCollection
     @CollectionTable(
             name = "notification_template_variables",
+            schema = "core",
             joinColumns = @JoinColumn(name = "notification_template_id")
     )
     @Column(name = "variable", length = 255)

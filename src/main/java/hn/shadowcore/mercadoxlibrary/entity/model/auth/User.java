@@ -19,12 +19,10 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.ParamDef;
@@ -37,7 +35,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @EqualsAndHashCode(callSuper = true)
-@Entity @Table(name = "user", schema = "auth")
+@Entity @Table(name = "users", schema = "auth")
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 @Builder(toBuilder = true)

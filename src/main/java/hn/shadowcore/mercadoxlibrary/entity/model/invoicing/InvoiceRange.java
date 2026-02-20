@@ -17,7 +17,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
-@Table(name = "invoice_range") @Data
+@Table(name = "invoice_range", schema = "invoicing") @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class InvoiceRange {

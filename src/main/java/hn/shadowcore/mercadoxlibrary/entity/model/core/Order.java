@@ -5,7 +5,6 @@ import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.User;
 import hn.shadowcore.mercadoxlibrary.entity.model.enums.OrderStatus;
-import hn.shadowcore.mercadoxlibrary.entity.model.invoicing.Invoice;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -21,8 +20,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -32,7 +29,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name = "order", schema = "core")
+@Table(name = "orders", schema = "core")
 @Data
 @Builder
 @AllArgsConstructor
@@ -62,10 +59,6 @@ public class Order extends TenantBaseEntity {
     @OneToOne
     @JoinColumn(name = "shipment_id")
     private Shipment shipment;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "invoice_id")
-    private Invoice invoice;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "org_id")

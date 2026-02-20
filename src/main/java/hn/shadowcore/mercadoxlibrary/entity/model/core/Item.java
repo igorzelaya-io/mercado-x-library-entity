@@ -3,7 +3,6 @@ package hn.shadowcore.mercadoxlibrary.entity.model.core;
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Branch;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
-import hn.shadowcore.mercadoxlibrary.entity.model.invoicing.Invoice;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,7 +22,6 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -76,12 +74,9 @@ public class Item extends TenantBaseEntity {
     @JoinColumn(name = "inventory_id")
     private Inventory inventory;
 
-    @ManyToOne
-    @JoinColumn(name = "invoice_id")
-    private Invoice invoice;
-
     @ManyToMany
     @JoinTable(name = "item_branch_availability",
+        schema = "core",
         joinColumns = @JoinColumn(name = "item_id"),
         inverseJoinColumns = @JoinColumn(name = "branch_id"))
     private Set<Branch> itemBranchAvailability = new HashSet<>();

@@ -3,7 +3,6 @@ package hn.shadowcore.mercadoxlibrary.entity.model.invoicing;
 
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.User;
-import hn.shadowcore.mercadoxlibrary.entity.model.core.Item;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Order;
 import hn.shadowcore.mercadoxlibrary.entity.model.core.Shipment;
 import jakarta.persistence.Column;
@@ -13,7 +12,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -22,7 +20,6 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -81,8 +78,5 @@ public class Invoice {
     @OneToOne
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     private Order order;
-
-    @OneToMany(mappedBy = "invoice")
-    private List<Item> items;
 
 }

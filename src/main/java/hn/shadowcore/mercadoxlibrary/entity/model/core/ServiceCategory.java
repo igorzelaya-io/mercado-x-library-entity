@@ -3,7 +3,6 @@ package hn.shadowcore.mercadoxlibrary.entity.model.core;
 
 import hn.shadowcore.mercadoxlibrary.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadoxlibrary.entity.model.auth.Organization;
-import hn.shadowcore.mercadoxlibrary.entity.model.enums.EntityStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -40,8 +39,5 @@ public class ServiceCategory extends TenantBaseEntity {
 
     @OneToMany(mappedBy = "serviceCategory")
     private List<Service> services;
-
-    @Column(name = "entity_status", nullable = false)
-    private EntityStatus entityStatus;
 
 }

@@ -43,6 +43,7 @@ public class Role extends TenantBaseEntity {
     @ManyToMany
     @JoinTable(
             name = "role_permissions",
+            schema = "auth",
             joinColumns = @JoinColumn(name = "role_id"),
             inverseJoinColumns = @JoinColumn(name = "permission_id")
     )
