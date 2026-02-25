@@ -4,18 +4,17 @@ import hn.shadowcore.mercadoxlibrary.entity.model.enums.NotificationTemplateName
 import hn.shadowcore.mercadoxlibrary.entity.response.EventDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmailEventDto<T> implements EventDto {
-
-    private UUID eventId;
+@EqualsAndHashCode(callSuper = true)
+public class EmailEventDto<T> extends EventDto {
 
     private String eventSubject;
 

@@ -14,6 +14,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OrderColumn;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -22,7 +23,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
-import java.util.Set;
+import java.util.List;
 
 @Entity @Table(name = "notification_template", schema = "core")
 @Data @Builder
@@ -35,8 +36,8 @@ public class NotificationTemplate extends TenantBaseEntity {
     @SequenceGenerator(name = "template_seq", sequenceName = "core.notification_template_id_seq", allocationSize = 1)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "template_key", nullable = false)
+    private String templateKey;
 
     @Column(name = "channel", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -48,9 +49,6 @@ public class NotificationTemplate extends TenantBaseEntity {
     @ManyToOne
     @JoinColumn(name = "org_id", nullable = false)
     private Organization organization;
-
-    @Column(name = "whatsapp_template_name")
-    private String whatsappTemplateName;
 
     @Column
     private String subject;
@@ -70,14 +68,18 @@ public class NotificationTemplate extends TenantBaseEntity {
     @Column(name = "updated_at")
     private Timestamp updatedAt;
 
+    @Column(name = "whatsapp_template_name")
+    private String whatsappTemplateName;
+
     @ElementCollection
     @CollectionTable(
             name = "notification_template_variables",
             schema = "core",
             joinColumns = @JoinColumn(name = "notification_template_id")
     )
+    @OrderColumn(name = "variable_order")
     @Column(name = "variable", length = 255)
-    private Set<String> variables;
+    private List<String> variables;
 
     public void setOrganization(Organization organization) {
         this.organization = organization;
