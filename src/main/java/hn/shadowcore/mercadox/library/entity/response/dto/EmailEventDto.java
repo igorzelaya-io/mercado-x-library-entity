@@ -1,0 +1,29 @@
+package hn.shadowcore.mercadox.library.entity.response.dto;
+
+import hn.shadowcore.mercadox.library.entity.response.EventDto;
+import hn.shadowcore.mercadox.library.entity.model.enums.NotificationTemplateName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+import java.time.Instant;
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class EmailEventDto<T> extends EventDto {
+
+    private String eventSubject;
+
+    private NotificationTemplateName emailTemplate;
+
+    private List<EmailRecipientDto> recipients;
+
+    private T payload;
+
+    private Instant timestamp;
+
+}
