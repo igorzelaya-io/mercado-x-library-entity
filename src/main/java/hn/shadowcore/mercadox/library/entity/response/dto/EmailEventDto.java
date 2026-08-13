@@ -1,7 +1,7 @@
 package hn.shadowcore.mercadox.library.entity.response.dto;
 
-import hn.shadowcore.mercadox.library.entity.response.EventDto;
 import hn.shadowcore.mercadox.library.entity.model.enums.NotificationTemplateName;
+import hn.shadowcore.mercadox.library.entity.model.enums.kafka.event.DomainEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class EmailEventDto<T> extends EventDto {
+public class EmailEventDto<T> extends DomainEvent {
 
     private String eventSubject;
 
