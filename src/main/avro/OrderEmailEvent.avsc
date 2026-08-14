@@ -1,0 +1,62 @@
+{
+  "type": "record",
+  "name": "OrderEmailEvent",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Published to order.operation.place / order.operation.confirm / order.operation.cancelled. Avro counterpart of EmailEventDto<OrderDto>.",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID uniquely identifying this event. Used for idempotency deduplication in Redis."
+    },
+    {
+      "name": "eventType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "orgId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "occurredAt",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "ISO-8601 timestamp of when the event occurred."
+    },
+    {
+      "name": "eventSubject",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Subject line for the outgoing email."
+    },
+    {
+      "name": "emailTemplate",
+      "type": "hn.shadowcore.mercadox.library.entity.avro.NotificationTemplateName",
+      "default": "ORDER_REQUEST_TEMPLATE"
+    },
+    {
+      "name": "recipients",
+      "type": {
+        "type": "array",
+        "items": "hn.shadowcore.mercadox.library.entity.avro.EmailRecipient"
+      },
+      "default": []
+    },
+    {
+      "name": "payload",
+      "type": ["null", "hn.shadowcore.mercadox.library.entity.avro.OrderPayload"],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Epoch milliseconds when the event was created. Maps to java.time.Instant."
+    }
+  ]
+}

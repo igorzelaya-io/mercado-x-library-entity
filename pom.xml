@@ -16,6 +16,7 @@
     <java.version>17</java.version>
     <querydsl.version>5.1.0</querydsl.version>
     <querydsl.generated.sources>target/generated-sources/java</querydsl.generated.sources>
+    <avro.version>1.11.3</avro.version>
   </properties>
 
   <repositories>
@@ -74,10 +75,45 @@
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro</artifactId>
+      <version>${avro.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro-maven-plugin</artifactId>
+        <version>${avro.version}</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>schema</goal>
+            </goals>
+            <configuration>
+              <sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
+              <outputDirectory>${project.build.directory}/generated-sources/avro</outputDirectory>
+              <!-- Generate java.lang.String instead of CharSequence -->
+              <stringType>String</stringType>
+              <!-- Allow mutating generated records -->
+              <createSetters>true</createSetters>
+              <enableDecimalLogicalType>true</enableDecimalLogicalType>
+              <!-- Compile shared types before schemas that reference them -->
+              <imports>
+                <import>${project.basedir}/src/main/avro/NotificationTemplateName.avsc</import>
+                <import>${project.basedir}/src/main/avro/EmailRecipient.avsc</import>
+                <import>${project.basedir}/src/main/avro/OrderPayload.avsc</import>
+              </imports>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -92,6 +128,7 @@
             <configuration>
               <sources>
                 <source>target/generated-sources/java</source>
+                <source>target/generated-sources/avro</source>
               </sources>
             </configuration>
           </execution>

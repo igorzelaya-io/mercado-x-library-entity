@@ -1,0 +1,51 @@
+{
+  "type": "record",
+  "name": "LeadCreatedEvent",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Published to lead.created.v1 when a new lead is created. Avro counterpart of LeadCreatedEvent.java.",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID uniquely identifying this event. Used for idempotency deduplication in Redis."
+    },
+    {
+      "name": "eventType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "orgId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID of the organization that owns this lead."
+    },
+    {
+      "name": "occurredAt",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "ISO-8601 timestamp of when the event occurred."
+    },
+    {
+      "name": "orgName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "userName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "email",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "phoneNumber",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

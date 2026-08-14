@@ -1,6 +1,5 @@
 package hn.shadowcore.mercadox.library.entity.request;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import hn.shadowcore.mercadox.library.entity.response.dto.CartDto;
@@ -10,7 +9,7 @@ import lombok.Data;
 
 @JsonSerialize
 @Data
-public class PlaceOrderRequest {
+public class PlaceOrderRequest implements IdempotentRequest {
 
     @JsonProperty
     @NotNull
@@ -19,5 +18,14 @@ public class PlaceOrderRequest {
     @JsonProperty
     @NotBlank
     private String locationId;
+
+    @JsonProperty
+    @NotBlank
+    private String idempotencyKey;
+
+    @Override
+    public String getIdempotencyKey() {
+        return idempotencyKey;
+    }
 
 }

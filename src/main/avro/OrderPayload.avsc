@@ -1,0 +1,66 @@
+{
+  "type": "record",
+  "name": "OrderPayload",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Avro counterpart of OrderDto. Used as the payload inside order-related email events.",
+  "fields": [
+    {
+      "name": "id",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "createdAt",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "customerName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "email",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "shippingAddress",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "locationReference",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "organization",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "itemNames",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": []
+    },
+    {
+      "name": "quantity",
+      "type": "int",
+      "default": 0
+    },
+    {
+      "name": "searchUrl",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "friendlyUrl",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "type": "record",
+  "name": "UserRegistrationEmailEvent",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Published to user.registration.validation when a user registers. Avro counterpart of EmailEventDto<String>.",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID uniquely identifying this event. Used for idempotency deduplication in Redis."
+    },
+    {
+      "name": "eventType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "orgId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "occurredAt",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "ISO-8601 timestamp of when the event occurred."
+    },
+    {
+      "name": "eventSubject",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Subject line for the outgoing email."
+    },
+    {
+      "name": "emailTemplate",
+      "type": "hn.shadowcore.mercadox.library.entity.avro.NotificationTemplateName",
+      "default": "USER_VALIDATION_TEMPLATE"
+    },
+    {
+      "name": "recipients",
+      "type": {
+        "type": "array",
+        "items": "hn.shadowcore.mercadox.library.entity.avro.EmailRecipient"
+      },
+      "default": []
+    },
+    {
+      "name": "payload",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Free-form string payload (e.g. verification URL or token)."
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Epoch milliseconds when the event was created. Maps to java.time.Instant."
+    }
+  ]
+}

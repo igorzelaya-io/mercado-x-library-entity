@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "EmailRecipient",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Avro counterpart of EmailRecipientDto. Represents a single email recipient.",
+  "fields": [
+    {
+      "name": "name",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Display name of the recipient."
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "doc": "Email address of the recipient."
+    }
+  ]
+}
