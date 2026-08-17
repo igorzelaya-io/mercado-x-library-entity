@@ -1,13 +1,13 @@
 package hn.shadowcore.mercadox.library.entity.model.enums.kafka.publisher;
 
-import hn.shadowcore.mercadox.library.entity.response.dto.EmailEventDto;
+import hn.shadowcore.mercadox.library.entity.avro.OrderEmailEvent;
 
 public interface EmailEventPublisher {
 
-    void publishOrderPlaced(EmailEventDto<?> event);
+    void publishOrderPlaced(OrderEmailEvent event);
 
-    void publishOrderDispatch(EmailEventDto<?> event);
+    void publishOrderDispatch(OrderEmailEvent event);
 
-    void publishOrderCancelled(EmailEventDto<?> event);
+    void publishOrderCancelled(OrderEmailEvent event);
 
 }
