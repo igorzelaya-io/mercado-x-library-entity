@@ -1,0 +1,61 @@
+{
+  "type": "record",
+  "name": "AiReplyGeneratedEvent",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Published to ai.reply.generated.v1 after ConversationAiService produces a reply. Consumed by mercado-x-email to dispatch via WhatsApp or Email.",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID identifying this event. Used for idempotency deduplication in Redis."
+    },
+    {
+      "name": "eventType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "orgId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID of the organization that owns this conversation."
+    },
+    {
+      "name": "occurredAt",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "ISO-8601 timestamp of when the reply was generated."
+    },
+    {
+      "name": "channel",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Dispatch channel — WHATSAPP or EMAIL. Used by mercado-x-email to route to the correct sender."
+    },
+    {
+      "name": "recipient",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Destination address: phone number for WHATSAPP, email address for EMAIL."
+    },
+    {
+      "name": "text",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The AI-generated reply text to send to the recipient."
+    },
+    {
+      "name": "sendMode",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "FREEFORM if inside the 24-hour WhatsApp window; TEMPLATE if outside. EMAIL always uses FREEFORM."
+    },
+    {
+      "name": "templateKey",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Template name to use when sendMode=TEMPLATE. Null for FREEFORM sends."
+    }
+  ]
+}

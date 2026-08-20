@@ -1,4 +1,4 @@
-package hn.shadowcore.mercadox.library.entity.model.enums.kafka.event;
+package hn.shadowcore.mercadox.library.entity.kafka.event;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

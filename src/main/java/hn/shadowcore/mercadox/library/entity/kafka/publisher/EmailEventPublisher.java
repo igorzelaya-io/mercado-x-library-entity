@@ -1,4 +1,4 @@
-package hn.shadowcore.mercadox.library.entity.model.enums.kafka.publisher;
+package hn.shadowcore.mercadox.library.entity.kafka.publisher;
 
 import hn.shadowcore.mercadox.library.entity.avro.OrderEmailEvent;
 

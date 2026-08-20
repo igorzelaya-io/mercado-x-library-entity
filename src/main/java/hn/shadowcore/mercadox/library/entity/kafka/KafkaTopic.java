@@ -1,4 +1,4 @@
-package hn.shadowcore.mercadox.library.entity.model.enums.kafka;
+package hn.shadowcore.mercadox.library.entity.kafka;
 
 import lombok.Getter;
 
@@ -18,5 +18,10 @@ public final class KafkaTopic {
 
     //Lead
     public static final String LEAD_CREATED = "lead.created.v1";
+
+    //AI / WhatsApp conversation
+    public static final String WHATSAPP_MESSAGE_RECEIVED = "whatsapp.inbound.v1";
+
+    public static final String AI_REPLY_GENERATED = "ai.reply.generated.v1";
 
 }
