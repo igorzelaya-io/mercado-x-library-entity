@@ -3,6 +3,7 @@ package hn.shadowcore.mercadox.library.entity.model.ai;
 import hn.shadowcore.mercadox.library.entity.model.TenantBaseEntity;
 import hn.shadowcore.mercadox.library.entity.model.enums.ConversationChannel;
 import hn.shadowcore.mercadox.library.entity.model.enums.ConversationStatus;
+import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -25,6 +26,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Table(name = "conversation", schema = "ai")
+@AttributeOverride(name = "orgId", column = @Column(name = "org_id", nullable = false))
 public class Conversation extends TenantBaseEntity {
 
     @Id
@@ -48,11 +50,13 @@ public class Conversation extends TenantBaseEntity {
     private Instant lastInboundAt;
 
     public static Conversation startNew(
+            UUID orgId,
             ConversationChannel channel,
             String externalContactId
     ) {
         Conversation conv = new Conversation();
         conv.id = UUID.randomUUID();
+        conv.setOrgId(orgId);
         conv.channel = channel;
         conv.externalContactId = externalContactId;
         conv.status = ConversationStatus.ACTIVE;
