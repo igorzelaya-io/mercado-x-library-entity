@@ -1,0 +1,61 @@
+{
+  "type": "record",
+  "name": "WhatsAppMessageReceivedEvent",
+  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "doc": "Published to whatsapp.inbound.v1 when a client sends a WhatsApp message to the org's number.",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID identifying this event. Used for idempotency deduplication in Redis."
+    },
+    {
+      "name": "eventType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "orgId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "UUID of the organization that owns the receiving WhatsApp number."
+    },
+    {
+      "name": "occurredAt",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "ISO-8601 timestamp of when the webhook was received."
+    },
+    {
+      "name": "wamid",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "WhatsApp's own message ID (wamid). Used for webhook-level Redis dedupe before eventId exists."
+    },
+    {
+      "name": "phoneNumberId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Meta phone_number_id of the org's WhatsApp Business number that received the message."
+    },
+    {
+      "name": "fromPhoneNumber",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Sender's phone number — becomes externalContactId on the Conversation."
+    },
+    {
+      "name": "messageText",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Text body of the inbound message."
+    },
+    {
+      "name": "messageType",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "WhatsApp message type (e.g. text, image, document). Currently only 'text' is processed."
+    }
+  ]
+}

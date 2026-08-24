@@ -1,0 +1,417 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1783823125.6595812,
+    "ast_hash": "e60436437f7a9f4505fae0c2791e20cf",
+    "semantic_hash": "e60436437f7a9f4505fae0c2791e20cf"
+  },
+  "pom.xml": {
+    "mtime": 1786714841.9485178,
+    "ast_hash": "0aa1256ebbfddf0874078dae27a4960c",
+    "semantic_hash": "0aa1256ebbfddf0874078dae27a4960c"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/KafkaTopic.java": {
+    "mtime": 1787071794.501398,
+    "ast_hash": "dc928cfb951d8a1622ff647efd15b92b",
+    "semantic_hash": "dc928cfb951d8a1622ff647efd15b92b"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/event/DomainEvent.java": {
+    "mtime": 1787030912.6297278,
+    "ast_hash": "a8c20e43d3de821beffa7d684add54b3",
+    "semantic_hash": "a8c20e43d3de821beffa7d684add54b3"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/publisher/AiReplyEventPublisher.java": {
+    "mtime": 1787071818.3635254,
+    "ast_hash": "cb5fbabcc33d89f9af1e8c5bdd12e8fe",
+    "semantic_hash": "cb5fbabcc33d89f9af1e8c5bdd12e8fe"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/publisher/EmailEventPublisher.java": {
+    "mtime": 1787030912.3951943,
+    "ast_hash": "5a4692f03ba4c9c4f47d6e779a05e711",
+    "semantic_hash": "5a4692f03ba4c9c4f47d6e779a05e711"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/publisher/LeadEventPublisher.java": {
+    "mtime": 1787030912.0855985,
+    "ast_hash": "be12e50bce4c323993d8d1632560a5b2",
+    "semantic_hash": "be12e50bce4c323993d8d1632560a5b2"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/publisher/WhatsAppEventPublisher.java": {
+    "mtime": 1787071816.792415,
+    "ast_hash": "a39146509645885ba9019e45cebf4985",
+    "semantic_hash": "a39146509645885ba9019e45cebf4985"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java": {
+    "mtime": 1786714841.94983,
+    "ast_hash": "4dc69a2296e240e75cbc29da3ab13f60",
+    "semantic_hash": "4dc69a2296e240e75cbc29da3ab13f60"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/Conversation.java": {
+    "mtime": 1787030024.5160482,
+    "ast_hash": "0bea567f82118adf1234e9ad80b862aa",
+    "semantic_hash": "0bea567f82118adf1234e9ad80b862aa"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/ConversationMessage.java": {
+    "mtime": 1787030029.0937145,
+    "ast_hash": "01bee3fbd24e61e7fef425e111d8ee03",
+    "semantic_hash": "01bee3fbd24e61e7fef425e111d8ee03"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/OrganizationWhatsAppConfig.java": {
+    "mtime": 1787030018.3647513,
+    "ast_hash": "87749f0fc45b0853b5573b6a2a61a42d",
+    "semantic_hash": "87749f0fc45b0853b5573b6a2a61a42d"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/AuditLog.java": {
+    "mtime": 1786714841.9501402,
+    "ast_hash": "cceb886499be2a8d060aa2a8ac12c2d2",
+    "semantic_hash": "cceb886499be2a8d060aa2a8ac12c2d2"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/Branch.java": {
+    "mtime": 1786714841.950377,
+    "ast_hash": "c1bd30ec3669f8a7c272138f884ad63f",
+    "semantic_hash": "c1bd30ec3669f8a7c272138f884ad63f"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/Organization.java": {
+    "mtime": 1786714841.9506252,
+    "ast_hash": "69e51e138f9022465ac7f0af659702ea",
+    "semantic_hash": "69e51e138f9022465ac7f0af659702ea"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/Permission.java": {
+    "mtime": 1786714841.9511528,
+    "ast_hash": "b12c4f3ebf22120ff5841c367172d4c2",
+    "semantic_hash": "b12c4f3ebf22120ff5841c367172d4c2"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/RefreshTokens.java": {
+    "mtime": 1786714841.9515133,
+    "ast_hash": "1a3ec3b2a68cade27753e9a6d7d892ae",
+    "semantic_hash": "1a3ec3b2a68cade27753e9a6d7d892ae"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/Role.java": {
+    "mtime": 1786714841.9516482,
+    "ast_hash": "40c0ba4e102171cccfd3ae35b8e2c538",
+    "semantic_hash": "40c0ba4e102171cccfd3ae35b8e2c538"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/User.java": {
+    "mtime": 1786714841.9518068,
+    "ast_hash": "e576313c9c2537106ed6d83a1d174886",
+    "semantic_hash": "e576313c9c2537106ed6d83a1d174886"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/UserDetailsImpl.java": {
+    "mtime": 1786714841.9519877,
+    "ast_hash": "db8cd885c37a0de4fbe6e10342e18cbe",
+    "semantic_hash": "db8cd885c37a0de4fbe6e10342e18cbe"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/UserNotificationPreference.java": {
+    "mtime": 1786714841.9522648,
+    "ast_hash": "ff80ac4d10a3e8af37d456d98b9a6cdd",
+    "semantic_hash": "ff80ac4d10a3e8af37d456d98b9a6cdd"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/UserType.java": {
+    "mtime": 1786714841.9524438,
+    "ast_hash": "7fc89c47da291d523ac17ca1972b40ba",
+    "semantic_hash": "7fc89c47da291d523ac17ca1972b40ba"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Appointment.java": {
+    "mtime": 1786714841.9526246,
+    "ast_hash": "ca3115f2181da5fb57d0572d44732188",
+    "semantic_hash": "ca3115f2181da5fb57d0572d44732188"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Category.java": {
+    "mtime": 1786714841.95277,
+    "ast_hash": "5ae52c0ba276008ecf9722aaa571abc7",
+    "semantic_hash": "5ae52c0ba276008ecf9722aaa571abc7"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Inventory.java": {
+    "mtime": 1786714841.9528987,
+    "ast_hash": "92bf0cbcfd8690ffc8d4307fb232b4c0",
+    "semantic_hash": "92bf0cbcfd8690ffc8d4307fb232b4c0"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Item.java": {
+    "mtime": 1786714841.9530563,
+    "ast_hash": "ead764025c5a2e9a0f603fd0931cfb5a",
+    "semantic_hash": "ead764025c5a2e9a0f603fd0931cfb5a"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Lead.java": {
+    "mtime": 1786714841.95319,
+    "ast_hash": "22e4d62939d123f72df01196d7f82b54",
+    "semantic_hash": "22e4d62939d123f72df01196d7f82b54"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Location.java": {
+    "mtime": 1786714841.9533286,
+    "ast_hash": "b14838acf12b894c24d0f5df912aa6f0",
+    "semantic_hash": "b14838acf12b894c24d0f5df912aa6f0"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/NotificationTemplate.java": {
+    "mtime": 1786714841.9534683,
+    "ast_hash": "5d912fb77615ed83acb05cc7e97b7b9e",
+    "semantic_hash": "5d912fb77615ed83acb05cc7e97b7b9e"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Order.java": {
+    "mtime": 1786714841.9536114,
+    "ast_hash": "5dc64fd8c6247d909d5646f1b4a271cf",
+    "semantic_hash": "5dc64fd8c6247d909d5646f1b4a271cf"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/OrderItem.java": {
+    "mtime": 1786714841.9537783,
+    "ast_hash": "0de309e513715cb6d5b1dfdf754f70d6",
+    "semantic_hash": "0de309e513715cb6d5b1dfdf754f70d6"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/OrderItemsKey.java": {
+    "mtime": 1786714841.9539516,
+    "ast_hash": "f1b9099ee669eead73c138b199e798e3",
+    "semantic_hash": "f1b9099ee669eead73c138b199e798e3"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Service.java": {
+    "mtime": 1786714841.9540994,
+    "ast_hash": "ed9361216e688141a9bd5344b2396d82",
+    "semantic_hash": "ed9361216e688141a9bd5344b2396d82"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/ServiceCategory.java": {
+    "mtime": 1786714841.9542444,
+    "ast_hash": "dfc7419463e8791ad479969a7af48e02",
+    "semantic_hash": "dfc7419463e8791ad479969a7af48e02"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Shipment.java": {
+    "mtime": 1786714841.954389,
+    "ast_hash": "d8ce69cf198e83327b0d75490d9e1044",
+    "semantic_hash": "d8ce69cf198e83327b0d75490d9e1044"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/ConversationChannel.java": {
+    "mtime": 1787030006.102872,
+    "ast_hash": "e09eb5b82a994f808c9b7a014c9a1b01",
+    "semantic_hash": "e09eb5b82a994f808c9b7a014c9a1b01"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/ConversationStatus.java": {
+    "mtime": 1787030007.1078563,
+    "ast_hash": "549c272d981facb51f671d8ef3f422de",
+    "semantic_hash": "549c272d981facb51f671d8ef3f422de"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/EntityStatus.java": {
+    "mtime": 1786714841.954562,
+    "ast_hash": "dbe5fecedf8823ef25f011dd144fa660",
+    "semantic_hash": "dbe5fecedf8823ef25f011dd144fa660"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/LanguageKey.java": {
+    "mtime": 1786714841.9546936,
+    "ast_hash": "fc3022ad9319c22bf198913079597f31",
+    "semantic_hash": "fc3022ad9319c22bf198913079597f31"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/LeadStatus.java": {
+    "mtime": 1786714841.954823,
+    "ast_hash": "c9dd9e8b6845c78a5b5b2f5814b115c5",
+    "semantic_hash": "c9dd9e8b6845c78a5b5b2f5814b115c5"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/MessageRole.java": {
+    "mtime": 1787030008.750261,
+    "ast_hash": "bc9e892563511a30fe3241a06f6f6f60",
+    "semantic_hash": "bc9e892563511a30fe3241a06f6f6f60"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/NotificationTemplateName.java": {
+    "mtime": 1786714841.9549623,
+    "ast_hash": "fb6876f74e1462b736f1c57068e28fd0",
+    "semantic_hash": "fb6876f74e1462b736f1c57068e28fd0"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/OrderStatus.java": {
+    "mtime": 1786714841.955079,
+    "ast_hash": "df2b6e1a1e3e28b7deac4b5ce23d8162",
+    "semantic_hash": "df2b6e1a1e3e28b7deac4b5ce23d8162"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/PaymentStatus.java": {
+    "mtime": 1786714841.9552398,
+    "ast_hash": "354428dcd4fff5a45ef06645a8891630",
+    "semantic_hash": "354428dcd4fff5a45ef06645a8891630"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/PaymentType.java": {
+    "mtime": 1786714841.9554365,
+    "ast_hash": "46c197e85e7b80ba9ee494dbc8255d3b",
+    "semantic_hash": "46c197e85e7b80ba9ee494dbc8255d3b"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/RoleName.java": {
+    "mtime": 1786714841.9559336,
+    "ast_hash": "34320279afbf04add914cc7cf9cba25a",
+    "semantic_hash": "34320279afbf04add914cc7cf9cba25a"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/SendMode.java": {
+    "mtime": 1787030009.2759955,
+    "ast_hash": "d21be3fb0e0aae425cf1ad8ed1de55eb",
+    "semantic_hash": "d21be3fb0e0aae425cf1ad8ed1de55eb"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/ShippingStatus.java": {
+    "mtime": 1786714841.9560597,
+    "ast_hash": "7f8f342f3d664b79dcb02ba12a087c13",
+    "semantic_hash": "7f8f342f3d664b79dcb02ba12a087c13"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/TemplateChannel.java": {
+    "mtime": 1786714841.9561794,
+    "ast_hash": "0bf5482e4c6a999d05bf78b4b6cd1fd1",
+    "semantic_hash": "0bf5482e4c6a999d05bf78b4b6cd1fd1"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/UserTypeName.java": {
+    "mtime": 1786714841.9562995,
+    "ast_hash": "cbe6d3b36df08934cfd222f0a478ebaa",
+    "semantic_hash": "cbe6d3b36df08934cfd222f0a478ebaa"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/invoicing/Invoice.java": {
+    "mtime": 1786714841.9576557,
+    "ast_hash": "12d20c5c44b34d40fce680aad3d5fff8",
+    "semantic_hash": "12d20c5c44b34d40fce680aad3d5fff8"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/invoicing/InvoiceRange.java": {
+    "mtime": 1786714841.957786,
+    "ast_hash": "d96d2e2db724c96f8cef0a578d583e56",
+    "semantic_hash": "d96d2e2db724c96f8cef0a578d583e56"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/invoicing/Payment.java": {
+    "mtime": 1786714841.9579186,
+    "ast_hash": "b9bc86bd3543bbf71bd10d23228f906b",
+    "semantic_hash": "b9bc86bd3543bbf71bd10d23228f906b"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/CartUseCase.java": {
+    "mtime": 1786714841.958125,
+    "ast_hash": "d60c7204044c574330e020afe8f368af",
+    "semantic_hash": "d60c7204044c574330e020afe8f368af"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/CategoryUseCase.java": {
+    "mtime": 1786714841.9582908,
+    "ast_hash": "6183717ac4eecb16dae31feebda46041",
+    "semantic_hash": "6183717ac4eecb16dae31feebda46041"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/ClientLeadUseCase.java": {
+    "mtime": 1786714841.958466,
+    "ast_hash": "b2602f220d00f3e9f43f32da306623c5",
+    "semantic_hash": "b2602f220d00f3e9f43f32da306623c5"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/ItemUseCase.java": {
+    "mtime": 1786714841.9586184,
+    "ast_hash": "2e296d181c8b77a1fe4089864d5d464f",
+    "semantic_hash": "2e296d181c8b77a1fe4089864d5d464f"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/LocationUseCase.java": {
+    "mtime": 1786714841.958762,
+    "ast_hash": "be30e286b53a882598d2775444e02cee",
+    "semantic_hash": "be30e286b53a882598d2775444e02cee"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/OrderQueryUseCase.java": {
+    "mtime": 1786714841.9588969,
+    "ast_hash": "02e05303a578538b505dc6bfd0f20a6f",
+    "semantic_hash": "02e05303a578538b505dc6bfd0f20a6f"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/OrderUseCase.java": {
+    "mtime": 1786714841.9590342,
+    "ast_hash": "76d8d6816f83a6e0bd506a2b8b58bb0c",
+    "semantic_hash": "76d8d6816f83a6e0bd506a2b8b58bb0c"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/OrganizationUseCase.java": {
+    "mtime": 1786714841.95917,
+    "ast_hash": "e76076346c6f132a320de0326583f043",
+    "semantic_hash": "e76076346c6f132a320de0326583f043"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/ports/incoming/RegistrationUseCase.java": {
+    "mtime": 1786714841.9592993,
+    "ast_hash": "6b45acca8a6c335fb24ad28a672c8007",
+    "semantic_hash": "6b45acca8a6c335fb24ad28a672c8007"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/AuthRequestDto.java": {
+    "mtime": 1786714841.9594784,
+    "ast_hash": "69e51e564e75dc190183eb923fd189da",
+    "semantic_hash": "69e51e564e75dc190183eb923fd189da"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/ClientLeadRequest.java": {
+    "mtime": 1786714841.9595978,
+    "ast_hash": "c12ff2cd5f22f2b4db45677a9136865c",
+    "semantic_hash": "c12ff2cd5f22f2b4db45677a9136865c"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/DispatchOrderRequest.java": {
+    "mtime": 1786714841.9597216,
+    "ast_hash": "d0269e45642ee614aa5938989910cfa8",
+    "semantic_hash": "d0269e45642ee614aa5938989910cfa8"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/IdempotentRequest.java": {
+    "mtime": 1786714841.959828,
+    "ast_hash": "cda9a355f89ccfc6ca57e409650ab2af",
+    "semantic_hash": "cda9a355f89ccfc6ca57e409650ab2af"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/OrgCreationRequest.java": {
+    "mtime": 1786714841.9599512,
+    "ast_hash": "70a5fb097a3941f4cb445e9f97575afc",
+    "semantic_hash": "70a5fb097a3941f4cb445e9f97575afc"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/PlaceOrderRequest.java": {
+    "mtime": 1786714841.9600577,
+    "ast_hash": "2854f780b30992106fdb87cd1af2c036",
+    "semantic_hash": "2854f780b30992106fdb87cd1af2c036"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/RegisterRequestDto.java": {
+    "mtime": 1786714841.9601886,
+    "ast_hash": "1b1a86f139de52d588c6ff40233bdfdb",
+    "semantic_hash": "1b1a86f139de52d588c6ff40233bdfdb"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/request/webhook/WhatsAppWebhookPayload.java": {
+    "mtime": 1787201557.188574,
+    "ast_hash": "6f273a3c32e690f04f7afe762a0e7e4a",
+    "semantic_hash": "6f273a3c32e690f04f7afe762a0e7e4a"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/BaseResponseDto.java": {
+    "mtime": 1786714841.960359,
+    "ast_hash": "12e123f31f52fb03b6ab52a42788edf0",
+    "semantic_hash": "12e123f31f52fb03b6ab52a42788edf0"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/PaginatedResponse.java": {
+    "mtime": 1786714841.9606078,
+    "ast_hash": "bf17834ca2143fec5a7b9bd60ad68e64",
+    "semantic_hash": "bf17834ca2143fec5a7b9bd60ad68e64"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/Response.java": {
+    "mtime": 1786714841.9616208,
+    "ast_hash": "e9999812551a85da1fa004ad2ea971ce",
+    "semantic_hash": "e9999812551a85da1fa004ad2ea971ce"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/CartDto.java": {
+    "mtime": 1786714841.9619503,
+    "ast_hash": "24a75b41e8b8650ae86b89ca8153751f",
+    "semantic_hash": "24a75b41e8b8650ae86b89ca8153751f"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/ItemDto.java": {
+    "mtime": 1786714841.962336,
+    "ast_hash": "6ffc5df7b22e7377b0ddad18a2242ee1",
+    "semantic_hash": "6ffc5df7b22e7377b0ddad18a2242ee1"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/LocationDto.java": {
+    "mtime": 1786714841.962463,
+    "ast_hash": "560f736cb960aea239b6ca260e11e790",
+    "semantic_hash": "560f736cb960aea239b6ca260e11e790"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/NotificationRequest.java": {
+    "mtime": 1786714841.9625971,
+    "ast_hash": "f4757110cfc0fa9252e77d27840fa67c",
+    "semantic_hash": "f4757110cfc0fa9252e77d27840fa67c"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/OrganizationDto.java": {
+    "mtime": 1786714841.962871,
+    "ast_hash": "ac10239f63c6532a345e9fe5113ae1df",
+    "semantic_hash": "ac10239f63c6532a345e9fe5113ae1df"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/UserDto.java": {
+    "mtime": 1786714841.9631524,
+    "ast_hash": "420d900a14605c3b58ed85248b4a3fec",
+    "semantic_hash": "420d900a14605c3b58ed85248b4a3fec"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/VerificationTokenDto.java": {
+    "mtime": 1786714841.9632947,
+    "ast_hash": "a97c9e8fba026501f7e74353732eae1d",
+    "semantic_hash": "a97c9e8fba026501f7e74353732eae1d"
+  },
+  "src/main/resources/archetype-resources/pom.xml": {
+    "mtime": 1744503873.9664516,
+    "ast_hash": "d22cfab92651e53093a8732751cc66fa",
+    "semantic_hash": "d22cfab92651e53093a8732751cc66fa"
+  },
+  "src/main/resources/archetype-resources/src/main/java/App.java": {
+    "mtime": 1744503873.966905,
+    "ast_hash": "89d3dba38591638f59298e4d94c2b511",
+    "semantic_hash": "89d3dba38591638f59298e4d94c2b511"
+  },
+  "src/main/resources/archetype-resources/src/test/java/AppTest.java": {
+    "mtime": 1744503873.9673178,
+    "ast_hash": "c5bff0e4a7793ae27cd1a89d190d2973",
+    "semantic_hash": "c5bff0e4a7793ae27cd1a89d190d2973"
+  }
+}
