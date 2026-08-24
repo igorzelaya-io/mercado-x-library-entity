@@ -4,3 +4,4 @@ public enum SendMode {
     FREEFORM,
     TEMPLATE
 }
+
