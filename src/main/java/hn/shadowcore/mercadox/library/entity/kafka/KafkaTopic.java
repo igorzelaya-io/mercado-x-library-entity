@@ -24,4 +24,6 @@ public final class KafkaTopic {
 
     public static final String AI_REPLY_GENERATED = "ai.reply.generated.v1";
 
+    public static final String AI_USAGE_LIMIT_EXCEEDED = "ai.usage.limit.exceeded.v1";
+
 }

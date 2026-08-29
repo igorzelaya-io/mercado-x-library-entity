@@ -1,7 +1,10 @@
 package hn.shadowcore.mercadox.library.entity.model.ai;
 
+import hn.shadowcore.mercadox.library.entity.model.enums.SubscriptionPlan;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -40,6 +43,13 @@ public class OrganizationWhatsAppConfig {
     @Column(name = "default_reengagement_template")
     private String defaultReengagementTemplate;
 
+    @Column(name = "plan", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private SubscriptionPlan plan;
+
+    @Column(name = "allow_overage", nullable = false)
+    private boolean allowOverage;
+
     public static OrganizationWhatsAppConfig create(
             UUID organizationId,
             String phoneNumberId,
@@ -55,6 +65,8 @@ public class OrganizationWhatsAppConfig {
         config.accessToken = accessToken;
         config.aiEnabled = false;
         config.defaultReengagementTemplate = defaultReengagementTemplate;
+        config.plan = SubscriptionPlan.STARTER;
+        config.allowOverage = false;
         return config;
     }
 
