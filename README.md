@@ -22,7 +22,7 @@ It is a pure domain module: no repositories, no service logic, no Spring Boot ap
 | Package | Contents |
 |---|---|
 | `model.auth` | `User`, `Organization`, `Branch`, `Role`, `Permission`, `RefreshTokens`, `UserNotificationPreference`, `AuditLog` |
-| `model.core` | `Order`, `OrderItem`, `Item`, `Inventory`, `Category`, `Location`, `Shipment`, `Lead`, `NotificationTemplate`, `Appointment`, `Service`/`ServiceCategory` |
+| `model.core` | `Order`, `OrderItem`, `Item`, `Inventory`, `Category`, `Location`, `Shipment`, `Lead`, `NotificationTemplate`, `Service`/`ServiceCategory` |
 | `model.invoicing` | `Invoice`, `InvoiceRange`, `Payment` |
 | `model.enums` | `OrderStatus`, `LeadStatus`, `PaymentStatus`/`PaymentType`, `ShippingStatus`, `TemplateChannel`, `RoleName`, `UserTypeName`, `EntityStatus`, `LanguageKey`, `NotificationTemplateName` |
 
