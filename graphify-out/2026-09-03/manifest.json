@@ -10,9 +10,9 @@
     "semantic_hash": "0aa1256ebbfddf0874078dae27a4960c"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/KafkaTopic.java": {
-    "mtime": 1787919469.105284,
-    "ast_hash": "23b1af8285432aa7bf107d4519c7f777",
-    "semantic_hash": ""
+    "mtime": 1787071794.501398,
+    "ast_hash": "dc928cfb951d8a1622ff647efd15b92b",
+    "semantic_hash": "dc928cfb951d8a1622ff647efd15b92b"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/event/DomainEvent.java": {
     "mtime": 1787030912.6297278,
@@ -45,9 +45,9 @@
     "semantic_hash": "4dc69a2296e240e75cbc29da3ab13f60"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/Conversation.java": {
-    "mtime": 1787423030.6988077,
-    "ast_hash": "357d7c5e6c084e2ba656e93cc5d485fb",
-    "semantic_hash": ""
+    "mtime": 1787030024.5160482,
+    "ast_hash": "0bea567f82118adf1234e9ad80b862aa",
+    "semantic_hash": "0bea567f82118adf1234e9ad80b862aa"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/ConversationMessage.java": {
     "mtime": 1787030029.0937145,
@@ -55,9 +55,9 @@
     "semantic_hash": "01bee3fbd24e61e7fef425e111d8ee03"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/OrganizationWhatsAppConfig.java": {
-    "mtime": 1788380381.5823736,
-    "ast_hash": "68dac44cef257bc199620dcfcd21546d",
-    "semantic_hash": ""
+    "mtime": 1787030018.3647513,
+    "ast_hash": "87749f0fc45b0853b5573b6a2a61a42d",
+    "semantic_hash": "87749f0fc45b0853b5573b6a2a61a42d"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/AuditLog.java": {
     "mtime": 1786714841.9501402,
@@ -108,6 +108,11 @@
     "mtime": 1786714841.9524438,
     "ast_hash": "7fc89c47da291d523ac17ca1972b40ba",
     "semantic_hash": "7fc89c47da291d523ac17ca1972b40ba"
+  },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Appointment.java": {
+    "mtime": 1786714841.9526246,
+    "ast_hash": "ca3115f2181da5fb57d0572d44732188",
+    "semantic_hash": "ca3115f2181da5fb57d0572d44732188"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Category.java": {
     "mtime": 1786714841.95277,
@@ -199,6 +204,11 @@
     "ast_hash": "bc9e892563511a30fe3241a06f6f6f60",
     "semantic_hash": "bc9e892563511a30fe3241a06f6f6f60"
   },
+  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/NotificationTemplateName.java": {
+    "mtime": 1786714841.9549623,
+    "ast_hash": "fb6876f74e1462b736f1c57068e28fd0",
+    "semantic_hash": "fb6876f74e1462b736f1c57068e28fd0"
+  },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/OrderStatus.java": {
     "mtime": 1786714841.955079,
     "ast_hash": "df2b6e1a1e3e28b7deac4b5ce23d8162",
@@ -220,9 +230,9 @@
     "semantic_hash": "34320279afbf04add914cc7cf9cba25a"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/SendMode.java": {
-    "mtime": 1787551654.91954,
-    "ast_hash": "79b0cc27a121911410ca126b79b48a02",
-    "semantic_hash": ""
+    "mtime": 1787030009.2759955,
+    "ast_hash": "d21be3fb0e0aae425cf1ad8ed1de55eb",
+    "semantic_hash": "d21be3fb0e0aae425cf1ad8ed1de55eb"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/ShippingStatus.java": {
     "mtime": 1786714841.9560597,
@@ -305,9 +315,9 @@
     "semantic_hash": "69e51e564e75dc190183eb923fd189da"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/request/ClientLeadRequest.java": {
-    "mtime": 1787712699.6150844,
-    "ast_hash": "796ff8f1ac31822b68ff5ad5504a8acf",
-    "semantic_hash": ""
+    "mtime": 1786714841.9595978,
+    "ast_hash": "c12ff2cd5f22f2b4db45677a9136865c",
+    "semantic_hash": "c12ff2cd5f22f2b4db45677a9136865c"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/request/DispatchOrderRequest.java": {
     "mtime": 1786714841.9597216,
@@ -403,120 +413,5 @@
     "mtime": 1744503873.9673178,
     "ast_hash": "c5bff0e4a7793ae27cd1a89d190d2973",
     "semantic_hash": "c5bff0e4a7793ae27cd1a89d190d2973"
-  },
-  ".claude/settings.json": {
-    "mtime": 1787343569.786056,
-    "ast_hash": "3a435d0a7c0b78807b0411cca3e20fa8",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/crypto/EncryptedStringConverter.java": {
-    "mtime": 1788380365.7200003,
-    "ast_hash": "5f1755b79567db3e1bb5375fef09ebae",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/crypto/MasterKeyOperationException.java": {
-    "mtime": 1788380334.8579466,
-    "ast_hash": "48a75635a622ec773c4f7aaa5f8a03ca",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/crypto/MasterKeyService.java": {
-    "mtime": 1788380339.94177,
-    "ast_hash": "a5df1cf870ce97671c661934d29f3648",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/publisher/AiUsageLimitEventPublisher.java": {
-    "mtime": 1787919472.2042496,
-    "ast_hash": "8b94b48c265eded0e95344a9a19f31cd",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/OrganizationPersona.java": {
-    "mtime": 1788044287.1454854,
-    "ast_hash": "228048e4e54e18a3e8f8b3431ae5f291",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/PlatformPersona.java": {
-    "mtime": 1788120172.0946329,
-    "ast_hash": "71ad3041c055e85e0325ae43cac603b5",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/appointments/GoogleCalendarConnection.java": {
-    "mtime": 1788390786.4014275,
-    "ast_hash": "110a68c4558c47d3e521154fcf10aa91",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/appointments/GoogleOAuthAuthorizationTransaction.java": {
-    "mtime": 1788390786.4569252,
-    "ast_hash": "284cfa466db8af4618772d8d8a044f04",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/GoogleCalendarAuthorizationPurpose.java": {
-    "mtime": 1788390786.5124931,
-    "ast_hash": "85c990eda1a972cf7ef3fcbd97a6d65c",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/GoogleCalendarConnectionStatus.java": {
-    "mtime": 1788390786.56573,
-    "ast_hash": "43646972a93279e3d4517519cc1e6db2",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/model/enums/SubscriptionPlan.java": {
-    "mtime": 1787919443.1642754,
-    "ast_hash": "8e7c178c46ecf30ac1af3d9567391299",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/request/appointments/StartGoogleCalendarConnectionRequest.java": {
-    "mtime": 1788390786.650466,
-    "ast_hash": "f22fda1d6c0f554d976e645435f3f099",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/response/ApiError.java": {
-    "mtime": 1788390945.061134,
-    "ast_hash": "d9ddd3b4d33850b7909f377143ba569b",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/response/ApiErrorCode.java": {
-    "mtime": 1788390786.878135,
-    "ast_hash": "312dcaa3e59fefce95492dfe8bb331e6",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/response/ApiResponse.java": {
-    "mtime": 1788390786.7808924,
-    "ast_hash": "9d5e6fd33468a98bc6c189e045081bfd",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/response/FieldViolation.java": {
-    "mtime": 1788390786.9254448,
-    "ast_hash": "2e82c52c8003ab801f8df73b16680f22",
-    "semantic_hash": ""
-  },
-  "src/main/java/hn/shadowcore/mercadox/library/entity/response/dto/appointments/GoogleCalendarAuthorizationStart.java": {
-    "mtime": 1788390786.730779,
-    "ast_hash": "5e9e090411ec63337958d250b9e58542",
-    "semantic_hash": ""
-  },
-  "src/test/java/hn/shadowcore/mercadox/library/entity/crypto/EncryptedStringConverterTest.java": {
-    "mtime": 1788380513.033324,
-    "ast_hash": "93771d0c03651121e3c925ba02a28383",
-    "semantic_hash": ""
-  },
-  "src/test/java/hn/shadowcore/mercadox/library/entity/response/ApiResponseTest.java": {
-    "mtime": 1788393916.75502,
-    "ast_hash": "ecd4d3b00ce6db1890d4f568e6436fe4",
-    "semantic_hash": ""
-  },
-  ".github/workflows/ci.yml": {
-    "mtime": 1788034284.589026,
-    "ast_hash": "3039d4d36332c84a7aacb1ec2ae1b112",
-    "semantic_hash": ""
-  },
-  "CLAUDE.md": {
-    "mtime": 1787343569.7854776,
-    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
-    "semantic_hash": ""
-  },
-  "README.md": {
-    "mtime": 1788359077.2940094,
-    "ast_hash": "3bdf6fe66a020e489976ce3c2cbd92b0",
-    "semantic_hash": ""
   }
 }

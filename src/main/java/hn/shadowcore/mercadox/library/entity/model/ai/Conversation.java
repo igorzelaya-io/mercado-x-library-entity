@@ -49,6 +49,11 @@ public class Conversation extends TenantBaseEntity {
     @Column(name = "last_inbound_at")
     private Instant lastInboundAt;
 
+    // Spans the whole conversation — set once from the first inbound message's
+    // correlation ID, then reused (not regenerated) on every message after.
+    @Column(name = "correlation_id")
+    private String correlationId;
+
     public static Conversation startNew(
             UUID orgId,
             ConversationChannel channel,

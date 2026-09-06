@@ -1,7 +1,9 @@
 package hn.shadowcore.mercadox.library.entity.model.ai;
 
+import hn.shadowcore.mercadox.library.entity.crypto.EncryptedStringConverter;
 import hn.shadowcore.mercadox.library.entity.model.enums.SubscriptionPlan;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -37,6 +39,7 @@ public class OrganizationWhatsAppConfig {
     @Column(name = "ai_enabled", nullable = false)
     private boolean aiEnabled;
 
+    @Convert(converter = EncryptedStringConverter.class)
     @Column(name = "access_token", nullable = false)
     private String accessToken;
 
