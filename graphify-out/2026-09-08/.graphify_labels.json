@@ -51,10 +51,5 @@
   "49": "AiUsageLimitExceededEvent",
   "50": "MasterKeyOperationException",
   "51": "CLAUDE.md",
-  "52": "StartGoogleCalendarConnectionRequest.java",
-  "53": "PlaceOrderRequest",
-  "54": "ItemDto",
-  "55": "RefreshTokens",
-  "56": "InvoiceRange.java",
-  "57": "Q: Okay, there is only one thing here that you are missing, we have an order for our files, for example the database model domain classes go into mercado-x-library-entity. the Repositories go into library-jpa project. Also, we already have a Response interface in library-entity for responses, I like that ApiError model for Field Violations etc, but can you adapt that implementation. So yeah, please lets keep models and dtos in the library-entity module and let's keep this mercado-x-appointments exclusive for business logic."
+  "52": "StartGoogleCalendarConnectionRequest.java"
 }

@@ -5,9 +5,9 @@
     "semantic_hash": "e60436437f7a9f4505fae0c2791e20cf"
   },
   "pom.xml": {
-    "mtime": 1788465419.1691463,
-    "ast_hash": "adaa360b711770b0f857ae441b26f715",
-    "semantic_hash": ""
+    "mtime": 1786714841.9485178,
+    "ast_hash": "0aa1256ebbfddf0874078dae27a4960c",
+    "semantic_hash": "0aa1256ebbfddf0874078dae27a4960c"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/kafka/KafkaTopic.java": {
     "mtime": 1787919469.105284,
@@ -45,8 +45,8 @@
     "semantic_hash": "4dc69a2296e240e75cbc29da3ab13f60"
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/Conversation.java": {
-    "mtime": 1788528293.8105557,
-    "ast_hash": "6665d274c2a095bb3bae6af7c5568c1c",
+    "mtime": 1787423030.6988077,
+    "ast_hash": "357d7c5e6c084e2ba656e93cc5d485fb",
     "semantic_hash": ""
   },
   "src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/ConversationMessage.java": {
@@ -505,8 +505,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/ci.yml": {
-    "mtime": 1788909353.9825952,
-    "ast_hash": "aa0dc8879415fd28562e8dfd8ceaee2a",
+    "mtime": 1788034284.589026,
+    "ast_hash": "3039d4d36332c84a7aacb1ec2ae1b112",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -517,11 +517,6 @@
   "README.md": {
     "mtime": 1788359077.2940094,
     "ast_hash": "3bdf6fe66a020e489976ce3c2cbd92b0",
-    "semantic_hash": ""
-  },
-  "graphify-out/memory/query_20260903_110953_okay__there_is_only_one_thing_here_that_you_are_mi.md": {
-    "mtime": 1788433793.7183938,
-    "ast_hash": "bf6875f2e98aa0e1be07effb3830414f",
     "semantic_hash": ""
   }
 }

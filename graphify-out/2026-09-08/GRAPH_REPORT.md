@@ -1,16 +1,16 @@
-# Graph Report - mercado-x-library-entity  (2026-09-08)
+# Graph Report - mercado-x-library-entity  (2026-09-03)
 
 ## Corpus Check
-- 104 files · ~8,331 words
+- 103 files · ~7,964 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 674 nodes · 1122 edges · 58 communities (42 shown, 16 thin omitted)
+- 669 nodes · 1118 edges · 53 communities (37 shown, 16 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b88b4a74`
+- Built from commit: `93f3464b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -68,11 +68,6 @@
 - MasterKeyOperationException
 - CLAUDE.md
 - StartGoogleCalendarConnectionRequest.java
-- PlaceOrderRequest
-- ItemDto
-- RefreshTokens
-- InvoiceRange.java
-- Q: Okay, there is only one thing here that you are missing, we have an order for our files, for example the database model domain classes go into mercado-x-library-entity. the Repositories go into library-jpa project. Also, we already have a Response interface in library-entity for responses, I like that ApiError model for Field Violations etc, but can you adapt that implementation. So yeah, please lets keep models and dtos in the library-entity module and let's keep this mercado-x-appointments exclusive for business logic.
 
 ## God Nodes (most connected - your core abstractions)
 1. `Organization` - 46 edges
@@ -89,35 +84,35 @@
 ## Surprising Connections (you probably didn't know these)
 - `Conversation` --inherits--> `TenantBaseEntity`  [EXTRACTED]
   src/main/java/hn/shadowcore/mercadox/library/entity/model/ai/Conversation.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
-- `GoogleCalendarConnection` --inherits--> `TenantBaseEntity`  [EXTRACTED]
-  src/main/java/hn/shadowcore/mercadox/library/entity/model/appointments/GoogleCalendarConnection.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
-- `RefreshTokens` --inherits--> `TenantBaseEntity`  [EXTRACTED]
-  src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/RefreshTokens.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
+- `Branch` --inherits--> `TenantBaseEntity`  [EXTRACTED]
+  src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/Branch.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
 - `Role` --inherits--> `TenantBaseEntity`  [EXTRACTED]
   src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/Role.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
 - `User` --inherits--> `TenantBaseEntity`  [EXTRACTED]
   src/main/java/hn/shadowcore/mercadox/library/entity/model/auth/User.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
+- `Category` --inherits--> `TenantBaseEntity`  [EXTRACTED]
+  src/main/java/hn/shadowcore/mercadox/library/entity/model/core/Category.java → src/main/java/hn/shadowcore/mercadox/library/entity/model/TenantBaseEntity.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (58 total, 16 thin omitted)
+## Communities (53 total, 16 thin omitted)
 
 ### Community 0 - "User"
 Cohesion: 0.18
 Nodes (13): AllArgsConstructor, Data, Entity, NoArgsConstructor, Table, Location, LocationUseCase, AllArgsConstructor (+5 more)
 
 ### Community 1 - "Order"
-Cohesion: 0.09
-Nodes (24): AllArgsConstructor, Builder, Data, Entity, NoArgsConstructor, Table, Timestamp, Order (+16 more)
+Cohesion: 0.07
+Nodes (22): Getter, RequiredArgsConstructor, OrderStatus, CANCELLED, CLOSED, DELAYED, DELIVERED, IN_PROGRESS (+14 more)
 
 ### Community 2 - "Item"
 Cohesion: 0.08
-Nodes (46): MappedSuperclass, Branch, AllArgsConstructor, Data, Entity, NoArgsConstructor, Table, AllArgsConstructor (+38 more)
+Nodes (35): Branch, AllArgsConstructor, Data, Entity, NoArgsConstructor, Table, Inventory, AllArgsConstructor (+27 more)
 
 ### Community 3 - "Organization"
-Cohesion: 0.09
-Nodes (29): AllArgsConstructor, Builder, Entity, EqualsAndHashCode, Filter, FilterDef, Getter, NoArgsConstructor (+21 more)
+Cohesion: 0.06
+Nodes (48): AllArgsConstructor, Builder, Entity, Filter, Getter, NoArgsConstructor, Setter, Table (+40 more)
 
 ### Community 4 - "Branch"
 Cohesion: 0.14
@@ -128,8 +123,8 @@ Cohesion: 0.16
 Nodes (18): AllArgsConstructor, Builder, Data, Entity, NoArgsConstructor, Table, UserNotificationPreference, AllArgsConstructor (+10 more)
 
 ### Community 6 - "TenantBaseEntity"
-Cohesion: 0.25
-Nodes (8): GoogleCalendarConnection, AttributeOverride, Entity, Table, GoogleCalendarConnectionStatus, ACTIVE, REAUTH_REQUIRED, REVOKED
+Cohesion: 0.09
+Nodes (32): MappedSuperclass, GoogleCalendarConnection, AttributeOverride, Entity, Table, AllArgsConstructor, Builder, Data (+24 more)
 
 ### Community 7 - "Conversation"
 Cohesion: 0.16
@@ -251,45 +246,25 @@ Nodes (7): AllArgsConstructor, Builder, Data, Entity, NoArgsConstructor, Table, 
 Cohesion: 0.31
 Nodes (6): GoogleOAuthAuthorizationTransaction, GoogleCalendarAuthorizationPurpose, CONNECT, REAUTHORIZE, GoogleCalendarAuthorizationStart, URI
 
-### Community 53 - "PlaceOrderRequest"
-Cohesion: 0.16
-Nodes (7): CartUseCase, IdempotentRequest, Data, JsonSerialize, Override, PlaceOrderRequest, CartDto
-
-### Community 54 - "ItemDto"
-Cohesion: 0.18
-Nodes (8): ItemUseCase, ItemDto, AllArgsConstructor, Builder, Getter, JsonSerialize, NoArgsConstructor, Setter
-
-### Community 55 - "RefreshTokens"
-Cohesion: 0.42
-Nodes (8): AllArgsConstructor, Builder, Data, Entity, NoArgsConstructor, Table, Timestamp, RefreshTokens
-
-### Community 56 - "InvoiceRange.java"
-Cohesion: 0.46
-Nodes (7): InvoiceRange, AllArgsConstructor, Data, Entity, NoArgsConstructor, Table, Timestamp
-
-### Community 57 - "Q: Okay, there is only one thing here that you are missing, we have an order for our files, for example the database model domain classes go into mercado-x-library-entity. the Repositories go into library-jpa project. Also, we already have a Response interface in library-entity for responses, I like that ApiError model for Field Violations etc, but can you adapt that implementation. So yeah, please lets keep models and dtos in the library-entity module and let's keep this mercado-x-appointments exclusive for business logic."
-Cohesion: 0.40
-Nodes (4): Answer, Outcome, Q: Okay, there is only one thing here that you are missing, we have an order for our files, for example the database model domain classes go into mercado-x-library-entity. the Repositories go into library-jpa project. Also, we already have a Response interface in library-entity for responses, I like that ApiError model for Field Violations etc, but can you adapt that implementation. So yeah, please lets keep models and dtos in the library-entity module and let's keep this mercado-x-appointments exclusive for business logic., Source Nodes
-
 ## Knowledge Gaps
-- **77 isolated node(s):** `mercado-x-library-entity`, `EMAIL`, `WHATSAPP`, `ACTIVE`, `CLOSED` (+72 more)
+- **74 isolated node(s):** `mercado-x-library-entity`, `EMAIL`, `WHATSAPP`, `ACTIVE`, `CLOSED` (+69 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TenantBaseEntity` connect `Item` to `Order`, `Organization`, `NotificationTemplate`, `TenantBaseEntity`, `Conversation`, `Lead`, `Category`, `Role`, `RefreshTokens`?**
-  _High betweenness centrality (0.113) - this node is a cross-community bridge._
-- **Why does `Organization` connect `Item` to `Order`, `Organization`, `NotificationTemplate`, `Lead`, `Category`, `Role`, `Payment`, `OrgCreationRequest`, `AuditLog`, `RefreshTokens`?**
-  _High betweenness centrality (0.098) - this node is a cross-community bridge._
-- **Why does `User` connect `Organization` to `User`, `Order`, `Item`, `UserType`, `Role`, `UserDetailsImpl`, `Payment`, `AuditLog`, `RefreshTokens`?**
-  _High betweenness centrality (0.081) - this node is a cross-community bridge._
+- **Why does `TenantBaseEntity` connect `TenantBaseEntity` to `Item`, `Organization`, `NotificationTemplate`, `Conversation`, `Lead`, `Category`, `Role`?**
+  _High betweenness centrality (0.115) - this node is a cross-community bridge._
+- **Why does `Organization` connect `Organization` to `Item`, `NotificationTemplate`, `TenantBaseEntity`, `Lead`, `Category`, `Role`, `Payment`, `OrgCreationRequest`, `AuditLog`?**
+  _High betweenness centrality (0.100) - this node is a cross-community bridge._
+- **Why does `User` connect `Organization` to `User`, `TenantBaseEntity`, `UserType`, `Role`, `UserDetailsImpl`, `Payment`, `AuditLog`?**
+  _High betweenness centrality (0.082) - this node is a cross-community bridge._
 - **What connects `mercado-x-library-entity`, `EMAIL`, `WHATSAPP` to the rest of the system?**
-  _77 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _74 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Order` be split into smaller, more focused modules?**
-  _Cohesion score 0.08534850640113797 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07422402159244265 - nodes in this community are weakly interconnected._
 - **Should `Item` be split into smaller, more focused modules?**
-  _Cohesion score 0.08490566037735849 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07801418439716312 - nodes in this community are weakly interconnected._
 - **Should `Organization` be split into smaller, more focused modules?**
-  _Cohesion score 0.08846153846153847 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05879692446856626 - nodes in this community are weakly interconnected._
