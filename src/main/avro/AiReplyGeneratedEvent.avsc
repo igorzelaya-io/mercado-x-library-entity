@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "AiReplyGeneratedEvent",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Published to ai.reply.generated.v1 after ConversationAiService produces a reply. Consumed by mercado-x-email to dispatch via WhatsApp or Email.",
   "fields": [
     {

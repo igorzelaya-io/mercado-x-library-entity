@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "WhatsAppMessageReceivedEvent",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Published to whatsapp.inbound.v1 when a client sends a WhatsApp message to the org's number.",
   "fields": [
     {

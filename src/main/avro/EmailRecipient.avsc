@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "EmailRecipient",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Avro counterpart of EmailRecipientDto. Represents a single email recipient.",
   "fields": [
     {

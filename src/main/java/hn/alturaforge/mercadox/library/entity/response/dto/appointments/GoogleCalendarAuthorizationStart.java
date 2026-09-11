@@ -1,0 +1,13 @@
+package hn.alturaforge.mercadox.library.entity.response.dto.appointments;
+
+import hn.alturaforge.mercadox.library.entity.model.enums.GoogleCalendarAuthorizationPurpose;
+
+import java.net.URI;
+import java.time.Instant;
+
+public record GoogleCalendarAuthorizationStart(
+        URI authorizationUrl,
+        Instant expiresAt,
+        GoogleCalendarAuthorizationPurpose purpose
+) {
+}

@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "OrderEmailEvent",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Published to order.operation.place / order.operation.confirm / order.operation.cancelled. Avro counterpart of EmailEventDto<OrderDto>.",
   "fields": [
     {
@@ -34,20 +34,20 @@
     },
     {
       "name": "emailTemplate",
-      "type": "hn.shadowcore.mercadox.library.entity.avro.NotificationTemplateName",
+      "type": "hn.alturaforge.mercadox.library.entity.avro.NotificationTemplateName",
       "default": "ORDER_REQUEST_TEMPLATE"
     },
     {
       "name": "recipients",
       "type": {
         "type": "array",
-        "items": "hn.shadowcore.mercadox.library.entity.avro.EmailRecipient"
+        "items": "hn.alturaforge.mercadox.library.entity.avro.EmailRecipient"
       },
       "default": []
     },
     {
       "name": "payload",
-      "type": ["null", "hn.shadowcore.mercadox.library.entity.avro.OrderPayload"],
+      "type": ["null", "hn.alturaforge.mercadox.library.entity.avro.OrderPayload"],
       "default": null
     },
     {

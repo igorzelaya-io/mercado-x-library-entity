@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "AiUsageLimitExceededEvent",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Published to ai.usage.limit.exceeded.v1 when a tenant's monthly Claude usage crosses their plan limit. Consumed by mercado-x-email to notify the org admin.",
   "fields": [
     {

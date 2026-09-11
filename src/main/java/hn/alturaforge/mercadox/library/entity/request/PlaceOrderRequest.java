@@ -1,0 +1,31 @@
+package hn.alturaforge.mercadox.library.entity.request;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import hn.alturaforge.mercadox.library.entity.response.dto.CartDto;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+
+@JsonSerialize
+@Data
+public class PlaceOrderRequest implements IdempotentRequest {
+
+    @JsonProperty
+    @NotNull
+    private CartDto cartDto;
+
+    @JsonProperty
+    @NotBlank
+    private String locationId;
+
+    @JsonProperty
+    @NotBlank
+    private String idempotencyKey;
+
+    @Override
+    public String getIdempotencyKey() {
+        return idempotencyKey;
+    }
+
+}

@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "LeadCreatedEvent",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Published to lead.created.v1 when a new lead is created. Avro counterpart of LeadCreatedEvent.java.",
   "fields": [
     {

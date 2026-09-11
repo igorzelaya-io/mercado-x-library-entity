@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "UserRegistrationEmailEvent",
-  "namespace": "hn.shadowcore.mercadox.library.entity.avro",
+  "namespace": "hn.alturaforge.mercadox.library.entity.avro",
   "doc": "Published to user.registration.validation when a user registers. Avro counterpart of EmailEventDto<String>.",
   "fields": [
     {
@@ -34,14 +34,14 @@
     },
     {
       "name": "emailTemplate",
-      "type": "hn.shadowcore.mercadox.library.entity.avro.NotificationTemplateName",
+      "type": "hn.alturaforge.mercadox.library.entity.avro.NotificationTemplateName",
       "default": "USER_VALIDATION_TEMPLATE"
     },
     {
       "name": "recipients",
       "type": {
         "type": "array",
-        "items": "hn.shadowcore.mercadox.library.entity.avro.EmailRecipient"
+        "items": "hn.alturaforge.mercadox.library.entity.avro.EmailRecipient"
       },
       "default": []
     },
