@@ -17,6 +17,8 @@
     <querydsl.version>5.1.0</querydsl.version>
     <querydsl.generated.sources>target/generated-sources/java</querydsl.generated.sources>
     <avro.version>1.11.3</avro.version>
+    <!-- Avro and QueryDSL output is reproducible build output, not maintained source. -->
+    <sonar.exclusions>target/generated-sources/**</sonar.exclusions>
   </properties>
 
   <repositories>
